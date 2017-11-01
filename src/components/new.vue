@@ -1,22 +1,24 @@
 <template>
 <div class="hello">
-  <div style="width: 100%;text-align: center;">
-  </div>
 </div>
 
 </template>
 
 <script>
+// 引入文件
 export default {
   name: 'hello',
+  created() {},
   data() {
     return {
 
     }
   },
+  computed() {},
   methods: {
 
   }
+
 }
 
 </script>

@@ -24,6 +24,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'static':path.resolve(__dirname, '../static'),//这里给’static’赋予了一个地址，那么在程序中引入路径的时候’~static’就直接可以代替路径’../static’，
     }
   },
   module: {
