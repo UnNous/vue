@@ -7,6 +7,7 @@ import store from './vuex/index.js'
 import axios from 'axios'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+// import comFun from './assets/util.js'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios

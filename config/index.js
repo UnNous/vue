@@ -50,5 +50,5 @@ module.exports = {
  // 一般在static里面放一些类库的文件，在assets里面放属于该项目的资源文件
 
 // 因为webpack会将图片当做模块来引用，所以在js中需要使用require将图片引用进来，不能直接以字符串的形式。
- // imgUrl: require('图片地址')//正确的写法
+ // imgUrl: require('图片地址')//正确的写法 (例:require('./assets/1.jpg'))
 

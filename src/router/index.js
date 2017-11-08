@@ -1,24 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Hello from '@/components/Hello'
-import Home from '@/components/home'
+import Login from '@/components/Login'
+import Home from '@/components/Home'
 
 Vue.use(Router)
-
-
 let router =  new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello,
-      authentic:false
-    },
-    {
-      path: '/HelloWorld',
-      name: 'Hello',
-      component: HelloWorld,
+      name: 'Login',
+      component: Login,
       authentic:false
     },
     {

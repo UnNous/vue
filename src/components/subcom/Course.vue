@@ -8,28 +8,12 @@
         :radius-dot="radiusDot"
         :trigger="trigger"
         :arrow="arrow"
-        :heigth="100"
         >
-        <CarouselItem v-for="item in imgList">
+        <CarouselItem v-for="(item,index) in imgList" :key="index">
             <div class="demo-carousel">
             	<img class="imgStyle carousel" :src="item.src">
             </div>
         </CarouselItem>
-       <CarouselItem>
-             <div class="demo-carousel">
-            	<img class="imgStyle" src="../assets/2.jpg">
-            </div>
-        </CarouselItem>
-         <!-- <CarouselItem>
-             <div class="demo-carousel">
-            	<img class="imgStyle" src="../assets/2.jpg">
-            </div>
-        </CarouselItem>
-        <CarouselItem>
-             <div class="demo-carousel">
-            	<img class="imgStyle" src="../assets/4.png">
-            </div>
-        </CarouselItem> -->
     </Carousel>
 </div>
 </template>
