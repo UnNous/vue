@@ -2,12 +2,23 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
+import Index from '@/components/Index'
+import LoginCard from '@/components/subcom/LoginCard'
+import Test from '@/components/Test'
 
 Vue.use(Router)
 let router =  new Router({
+  // hashbang: true, 
+  // mode: 'history',// 去掉路由中的 #  例:http://localhost:8080/#/login
   routes: [
     {
       path: '/',
+      name: 'index',
+      component: Index,
+      authentic: false
+    },
+    {
+      path: '/login',
       name: 'Login',
       component: Login,
       authentic:false
@@ -16,11 +27,26 @@ let router =  new Router({
       path: '/home',
       name: 'Home',
       component: Home,
-      authentic:false
+      authentic:false,
+      children: [
+        
+      ]
       // 路由 (个体)拦截
       // beforeEnter: (to, from, next) => {
       //   next();
       // },
+    },
+    {
+      path: '/loginCard',
+      name: 'loginCard',
+      component: LoginCard,
+      authentic:false
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test,
+      authentic:false
     }
   ]
 })

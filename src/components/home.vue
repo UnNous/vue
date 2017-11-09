@@ -1,11 +1,7 @@
 <template>
 <div class="home">
-	<Row>
-		<Col :xs="{ span: 24, offset: 0 }"  :lg="{ span: 8, offset: 12 }">
-			
-		</Col>
-	</Row>
 	<bar></bar>
+	<!-- <router-view/> -->
 </div>
 
 </template>

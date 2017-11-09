@@ -3,15 +3,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
-    userid:'',
-    password:''
-  },
-  mutations: {
-    increment (state) {
-      state.count++
+    user: { 
+      userid: '', 
+      password: '' 
     }
   },
+  mutations: {
+    increment(state) {}
+  },
   actions: {
-    
+
   }
 })

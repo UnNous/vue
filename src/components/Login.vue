@@ -44,6 +44,14 @@
 import Course from '@/components/subcom/Course.vue'
 export default {
 	name: 'hello',
+	created(){
+		console.log(this.$store);
+		if(this.$store.state.user.userid != '' && this.$store.state.user.password != ''){
+			this.loginForm.username = this.$store.state.user.userid;
+			this.loginForm.psw = this.$store.state.user.password;
+		}
+		
+	},
 	components: {
 		Course:Course
 	},
@@ -111,6 +119,7 @@ export default {
 							if(this_.loginForm.psw == json[i].userpassword){
 								this_.result.success = true;
 								this_.result.user = {username:json[i].userid,psw:json[i].userpassword}
+								this.$store.state.user = {userid:json[i].userid,password:json[i].userpassword}
 							}
 						}else{
 							this_.result.success = true;

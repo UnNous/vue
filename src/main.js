@@ -11,6 +11,9 @@ import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
+// 屏幕高度和宽度
+Vue.prototype.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+Vue.prototype.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 
 Vue.use(iView)
 
