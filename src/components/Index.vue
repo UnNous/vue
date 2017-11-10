@@ -4,14 +4,18 @@
 		<div ref="moveBox" class="moveBox"  @dblclick="toLogin"></div>
 		
 	</div>
-	
+	<LoginCard :modal="modal" @modalChange="modalChanged"  ></LoginCard>
 </div>
 </template>
 
 <script>
 // import xx from ''
+import LoginCard from '@/components/subcom/login-card.vue'
 export default {
 	name: 'index',
+	components:{
+		LoginCard:LoginCard
+	},
 	mounted() {
 		this.$refs.box.style.width = this.width + 'px';
 		this.$refs.box.style.height = this.height + 'px';
@@ -21,7 +25,8 @@ export default {
 			moveBox:{
 				width:0,
 				height:0
-			}
+			},
+			modal:false
 		}
 	},
 	methods: {
@@ -30,8 +35,14 @@ export default {
 			this.$refs.moveBox.style.top = event.clientY - 25+ 'px';
 		},
 		toLogin(){
-			this.$router.push({path: '/login'});
+			this.modal = true
+			// this.$router.push({path: '/login'});
+		},
+		modalChanged(value){
+			this.modal  = value;
 		}
+
+
 		
 	}
 }

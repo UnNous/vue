@@ -40,7 +40,6 @@ export default {
 			}else{
 				this.$router.push({path:param})
 			}
-			console.log(param)
 			
 		}
 	}

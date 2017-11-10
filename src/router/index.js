@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/Login'
+import Main from '@/components/Main'
 import Home from '@/components/Home'
 import Index from '@/components/Index'
-import LoginCard from '@/components/subcom/LoginCard'
 import Test from '@/components/Test'
 
 Vue.use(Router)
@@ -18,9 +17,9 @@ let router =  new Router({
       authentic: false
     },
     {
-      path: '/login',
-      name: 'Login',
-      component: Login,
+      path: '/main',
+      name: 'Main',
+      component: Main,
       authentic:false
     },
     {
@@ -35,12 +34,6 @@ let router =  new Router({
       // beforeEnter: (to, from, next) => {
       //   next();
       // },
-    },
-    {
-      path: '/loginCard',
-      name: 'loginCard',
-      component: LoginCard,
-      authentic:false
     },
     {
       path: '/test',
